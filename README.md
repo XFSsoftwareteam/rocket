@@ -17,7 +17,7 @@
 
 # Installation
 * sudo su
-* sudo git clone
+* sudo git clone https://github.com/XFSsoftwareteam/rocket.git && cp rocket/rocket.py /usr/bin/rocket
 * chmod +x /usr/bin/rocket
 * sudo rocket
 
@@ -28,5 +28,5 @@
 
 # Contact
 * Phone number : XXXXXXXXX
-* Gmail : [xfssoftwareteam@gmail.com]
-* Github : [xfssoftwareteam]
+* Gmail : xfssoftwareteam@gmail.com
+* Github : @xfssoftwareteam
