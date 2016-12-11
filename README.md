@@ -1,4 +1,4 @@
-# rocket
+# Rocket
 * rocket v1.0
 * Rocket the easiest way to create backdoors
 
@@ -27,4 +27,6 @@
 * then $rocket
 
 # Contact
-[Gmail :] (xfssoftwareteam@gmail.com)
+* Phone number : XXXXXXXXX
+* Gmail : [xfssoftwareteam@gmail.com]
+* Github : [xfssoftwareteam]
