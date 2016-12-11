@@ -17,6 +17,14 @@
 
 # Installation
 * sudo su
-- sudo git clone
-+ chmod +x /usr/bin/rocket
+* sudo git clone
+* chmod +x /usr/bin/rocket
 * sudo rocket
+
+# Warning
+* Before you execute rocket make sure your are root
+* or run command $sudo su
+* then $rocket
+
+# Contact
+[Gmail :] (xfssoftwareteam@gmail.com)
