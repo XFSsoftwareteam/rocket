@@ -1,5 +1,5 @@
 # rocket
-### rocket v1.0
+* rocket v1.0
 ### Rocket the easiest way to create backdoors
 
 # Features
