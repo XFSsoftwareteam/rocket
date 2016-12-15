@@ -438,9 +438,9 @@ try:
             pass
         #Linux backdoors type
         def PLAIN_linuxbackdoor(self):
-            print("PLAIN_linuxbackdoor")
+            print("this backdoor is not available yet, wait next update")
         def SHIKATAGANAI_linuxbackdoor(self):
-            print("SHIKATAGANAI_linuxbackdoor")
+            print("this backdoor is not available yet, wait next update")
         
         #Android backdoors type
         def PLAIN_androidbackdoor(self):
