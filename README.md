@@ -11,7 +11,7 @@
 
 # Requirements
 * Python 3.5
-* An oprating system (tested on kali linux)
+* An OS (tested on kali linux)
 * msfconsole
 * msfvenom
 
@@ -26,7 +26,6 @@
 * or run command $sudo su
 * then $rocket
 
-# Contact
-* Phone number : XXXXXXXXX
+# Contact & Bugs report
 * Gmail : xfssoftwareteam@gmail.com
 * Github : @xfssoftwareteam
